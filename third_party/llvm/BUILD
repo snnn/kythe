@@ -11,11 +11,7 @@ filegroup(
 
 filegroup(
     name = "git",
-    srcs = glob([
-        "llvm/tools/clang/tools/extra/.git/**",
-        "llvm/tools/clang/.git/**",
-        "llvm/.git/**",
-    ]),
+    srcs = [],
 )
 
 cc_library(
@@ -24,35 +20,34 @@ cc_library(
     # modules_checked_empty.cc.
     # Do not sort; srcs are link-order dependent.
     srcs = [
-        "llvm/build/lib/libclangFormat.a",
-        "llvm/build/lib/libclangToolingCore.a",
-        "llvm/build/lib/libclangTooling.a",
-        "llvm/build/lib/libclangFrontend.a",
-        "llvm/build/lib/libclangDriver.a",
-        "llvm/build/lib/libclangParse.a",
-        "llvm/build/lib/libclangSema.a",
-        "llvm/build/lib/libclangEdit.a",
-        "llvm/build/lib/libclangRewrite.a",
-        "llvm/build/lib/libclangSerialization.a",
-        "llvm/build/lib/libclangAST.a",
-        "llvm/build/lib/libclangLex.a",
-        "llvm/build/lib/libclangBasic.a",
-        "llvm/build/lib/libclangAnalysis.a",
-        "llvm/build/lib/libLLVMMipsInfo.a",
-        "llvm/build/lib/libLLVMAArch64Info.a",
-        "llvm/build/lib/libLLVMARMInfo.a",
-        "llvm/build/lib/libLLVMPowerPCInfo.a",
-        "llvm/build/lib/libLLVMX86Info.a",
-        "llvm/build/lib/libLLVMOption.a",
-        "llvm/build/lib/libLLVMMC.a",
-        "llvm/build/lib/libLLVMMCParser.a",
-        "llvm/build/lib/libLLVMBitReader.a",
-        "llvm/build/lib/libLLVMProfileData.a",
-        "llvm/build/lib/libLLVMCore.a",
-        "llvm/build/lib/libLLVMBinaryFormat.a",
-        "llvm/build/lib/libLLVMSupport.a",
-        "llvm/build/lib/libLLVMDemangle.a",
-        "//tools/modules:check_modules",
+        "llvm/build/lib64/libclangFormat.a",
+        "llvm/build/lib64/libclangToolingCore.a",
+        "llvm/build/lib64/libclangTooling.a",
+        "llvm/build/lib64/libclangFrontend.a",
+        "llvm/build/lib64/libclangDriver.a",
+        "llvm/build/lib64/libclangParse.a",
+        "llvm/build/lib64/libclangSema.a",
+        "llvm/build/lib64/libclangEdit.a",
+        "llvm/build/lib64/libclangRewrite.a",
+        "llvm/build/lib64/libclangSerialization.a",
+        "llvm/build/lib64/libclangAST.a",
+        "llvm/build/lib64/libclangLex.a",
+        "llvm/build/lib64/libclangBasic.a",
+        "llvm/build/lib64/libclangAnalysis.a",
+        "llvm/build/lib64/libLLVMMipsInfo.a",
+        "llvm/build/lib64/libLLVMAArch64Info.a",
+        "llvm/build/lib64/libLLVMARMInfo.a",
+        "llvm/build/lib64/libLLVMPowerPCInfo.a",
+        "llvm/build/lib64/libLLVMX86Info.a",
+        "llvm/build/lib64/libLLVMOption.a",
+        "llvm/build/lib64/libLLVMMC.a",
+        "llvm/build/lib64/libLLVMMCParser.a",
+        "llvm/build/lib64/libLLVMBitReader.a",
+        "llvm/build/lib64/libLLVMProfileData.a",
+        "llvm/build/lib64/libLLVMCore.a",
+        "llvm/build/lib64/libLLVMBinaryFormat.a",
+        "llvm/build/lib64/libLLVMSupport.a",
+        "llvm/build/lib64/libLLVMDemangle.a",
     ],
     hdrs = glob([
         "llvm/include/**",
@@ -85,5 +80,5 @@ cc_library(
 
 cc_resources(
     name = "clang_builtin_headers_resources",
-    data = glob(["llvm/build/lib/clang/5.0.0/include/**/*.h"]),
+    data = glob(["llvm/build/lib64/clang/5.0.0/include/**/*.h"]),
 )
